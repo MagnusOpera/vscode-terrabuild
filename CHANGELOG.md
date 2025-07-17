@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.0.4
+- Fix ternary operator in map.
+
 ## 0.0.3
 - Update application description.
 
