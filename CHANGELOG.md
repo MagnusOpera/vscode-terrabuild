@@ -2,6 +2,7 @@
 
 ## 0.0.5
 - Fix readme.
+- Fix npm install.
 
 ## 0.0.4
 - Fix ternary operator in map.
