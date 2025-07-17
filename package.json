@@ -1,7 +1,7 @@
 {
   "icon": "assets/icons/magnusopera_logo.png",
   "name": "terrabuild",
-  "displayName": "Magnus Opera Terrabuild",
+  "displayName": "Terrabuild",
   "description": "Syntax highlighting for Terrabuild",
   "version": "0.0.1",
   "publisher": "MagnusOpera",
