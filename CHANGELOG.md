@@ -1,9 +1,10 @@
 # Change Log
 
-All notable changes to the "terrabuild" extension will be documented in this file.
+## 0.0.3
+- Update application description.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## 0.0.2
+- Update application name.
 
-## [Unreleased]
-
-- Initial release
+## 0.0.1
+- Initial release.
