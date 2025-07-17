@@ -1,5 +1,5 @@
 <a href="https://terrabuild.io?utm_campaign=magnusopera-terrabuild-github-repo&utm_source=marketplace.visualstudio.com&utm_medium=top-logo" title="Terrabuild - Monorepo build tool">
-    <img src="https://terrabuild.io/images/logo-name.svg" height="50" />
+<h1><img src="assets/icons/magnusopera_logo.png" alt="Terrabuild logo" height="50" style="vertical-align: middle;"> Terrabuild</h1>
 </a>
 
 <br>
