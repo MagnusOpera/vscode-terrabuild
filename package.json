@@ -1,0 +1,58 @@
+{
+  "icon": "assets/icons/magnusopera_logo.png",
+  "name": "terrabuild",
+  "displayName": "Magnus Opera Terrabuild",
+  "description": "Syntax highlighting for Terrabuild",
+  "version": "0.0.1",
+  "publisher": "Magnus Opera",
+  "license": "FSL-1.1-Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/magnusopera/vscode-terrabuild.git"
+  },
+  "engines": {
+    "vscode": "^1.102.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "extensionKind": [
+    "workspace"
+  ],
+  "keywords": [
+    "devops",
+    "terrabuild"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "terrabuild-workspace",
+        "aliases": ["Terrabuild Workspace"],
+        "filenames": ["WORKSPACE"],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "terrabuild-project",
+        "aliases": ["Terrabuild Project"],
+        "filenames": ["PROJECT"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "scopeName": "source.terrabuild.lang",
+        "path": "./syntaxes/terrabuild-lang.tmLanguage.json"
+      },
+      {
+        "language": "terrabuild-workspace",
+        "scopeName": "source.terrabuild.workspace",
+        "path": "./syntaxes/terrabuild-workspace.tmLanguage.json"
+      },
+      {
+        "language": "terrabuild-project",
+        "scopeName": "source.terrabuild.project",
+        "path": "./syntaxes/terrabuild-project.tmLanguage.json"
+      }
+    ]
+  }
+}

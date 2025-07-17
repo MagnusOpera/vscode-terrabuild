@@ -1,0 +1,70 @@
+
+project api {
+    labels = [ "app" ]
+    @dotnet { }
+}
+
+target build {
+    @dotnet build { }
+}
+
+target dist {
+    outputs = []
+
+    @dotnet publish { single = true }
+    @docker build {
+        arguments = {
+            base_tag: project.dotnet_runtime.version
+            platform: local.runtimes.dotnet
+            configuration: local.dotnet.config } }
+}
+
+target serve {
+    @dotnet watch { arguments = "run" }
+}
+
+
+locals {
+  string = "toto"
+  number = 42
+  negative_number = -42
+  map = { a: 42
+          b: 666}
+  list = [ "a"
+           "b" ]
+  literal_bool_true = true
+  literal_bool_false = false
+  literal_nothing = nothing
+
+  interpolated_string = "toto ${local.var + 42}"
+
+  data = var.titi
+  data_index = var.toto.42
+  data_index_name = var.toto.field
+  data_item = var.toto.["field"]
+
+  bool_equal = 42 == 666
+  bool_not_equal = 42 != 666
+  bool_and = true && false
+  bool_or = true || false
+  bool_not = !false
+
+  regex = "prodfr" ~= "^prod.*"
+
+  expr_math_op = 1 + 42*2 + 4/4 - 3
+  expr_bool_op = 1 + 42 == 42 + 1 == false
+  coalesce_op = nothing ?? "toto"
+  ternary_op = true ? "titi" : "toto"
+
+  function_trim = trim()
+  function_upper = upper()
+  function_lower = lower()
+  function_replace = replace()
+  function_count = count()
+
+  function_arity0 = trim()
+  function_arity1 = trim("titi")
+  function_arity2 = trim("titi", 42)
+  function_arity3 = trim("titi", 42, false)
+}
+

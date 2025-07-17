@@ -1,0 +1,36 @@
+name: Publish VS Code Extension
+
+on:
+  push:
+    tags:
+      - 'v*.*.*' # Triggers only when you push a version tag like v1.2.3
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ⬇️ Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🧰 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: 📋 Validate package.json
+        run: npx --yes jsonlint-cli package.json
+
+      - name: 🛠️ Install vsce
+        run: npm install -g vsce
+
+      - name: 📦 Package VS Code extension
+        run: vsce package
+
+      - name: 🚀 Publish to Marketplace
+        run: vsce publish --pat ${{ secrets.VSCE_TOKEN }}
+        env:
+          VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
