@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.0.8
+- Update docs.
+
+## 0.0.7
+- Fix classifiers for top-level blocks
+- Change classification for top-level blocks and inner-blocks
+
 ## 0.0.5
 - Fix readme.
 - Fix npm install.
