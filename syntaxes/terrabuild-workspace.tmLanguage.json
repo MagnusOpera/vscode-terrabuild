@@ -4,8 +4,8 @@
   "name": "Terrabuild Workspace",
   "fileTypes": [],
   "patterns": [
-    { "include": "source.terrabuild.lang" },
-    { "include": "#workspace-blocks" }
+    { "include": "#workspace-blocks" },
+    { "include": "source.terrabuild.lang" }
   ],
   "repository": {
     "workspace-blocks": {
@@ -13,6 +13,9 @@
         {
           "name": "meta.block.workspace",
           "begin": "\\b(workspace)\\s+(\\w+)\\s*\\{",
+          "beginCaptures": {
+            "1": { "name": "keyword.control" }
+          },
           "end": "\\}",
           "patterns": [
             { "include": "#workspace-attributes" },
@@ -25,7 +28,7 @@
           "begin": "\\b(target)\\s+(\\w+)\\s*\\{",
           "beginCaptures": {
             "1": { "name": "keyword.control" },
-            "2": { "name": "entity.name.function" }
+            "2": { "name": "variable.language" }
           },
           "end": "\\}",
           "patterns": [
@@ -39,7 +42,7 @@
           "begin": "\\b(extension)\\s+(@?[a-zA-Z_][a-zA-Z0-9_-]*)\\s*\\{",
           "beginCaptures": {
             "1": { "name": "keyword.control" },
-            "2": { "name": "entity.name.function" }
+            "2": { "name": "variable.language" }
           },
           "end": "\\}",
           "patterns": [
@@ -62,7 +65,7 @@
           "begin": "\\b(variable)\\s+(@?[a-zA-Z_][a-zA-Z0-9_-]*)\\s*\\{",
           "beginCaptures": {
             "1": { "name": "keyword.control" },
-            "2": { "name": "entity.name.function" }
+            "2": { "name": "variable.language" }
           },
           "end": "\\}",
           "patterns": [
@@ -72,6 +75,9 @@
         {
           "name": "meta.block.locals",
           "begin": "\\b(locals)\\s*\\{",
+          "beginCaptures": {
+            "1": { "name": "keyword.control" }
+          },
           "end": "\\}",
           "patterns": [
             { "include": "source.terrabuild.lang#maps" },
@@ -102,7 +108,7 @@
       "patterns": [
         {
           "name": "variable.parameter",
-          "match": "\\b(default|description)\\b(?=\\s*=)"
+          "match": "\\b(defaults|description)\\b(?=\\s*=)"
         }
       ]
     },

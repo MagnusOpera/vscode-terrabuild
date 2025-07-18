@@ -4,8 +4,8 @@
   "name": "Terrabuild Project",
   "fileTypes": [],
   "patterns": [
-    { "include": "source.terrabuild.lang" },
-    { "include": "#project-blocks" }
+    { "include": "#project-blocks" },
+    { "include": "source.terrabuild.lang" }
   ],
   "repository": {
     "project-blocks": {
