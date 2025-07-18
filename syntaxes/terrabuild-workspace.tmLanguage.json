@@ -20,7 +20,15 @@
           "patterns": [
             { "include": "#workspace-attributes" },
             { "include": "source.terrabuild.lang#generic-blocks" },
-            { "include": "source.terrabuild.lang#function-calls" }
+            { "include": "source.terrabuild.lang#comments" },
+            { "include": "source.terrabuild.lang#strings" },
+            { "include": "source.terrabuild.lang#numbers" },
+            { "include": "source.terrabuild.lang#booleans" },
+            { "include": "source.terrabuild.lang#operators" },
+            { "include": "source.terrabuild.lang#lists" },
+            { "include": "source.terrabuild.lang#maps" },
+            { "include": "source.terrabuild.lang#function-calls" },
+            { "include": "source.terrabuild.lang#identifiers" }
           ]
         },
         {
@@ -34,7 +42,15 @@
           "patterns": [
             { "include": "#target-attributes" },
             { "include": "source.terrabuild.lang#generic-blocks" },
-            { "include": "source.terrabuild.lang#function-calls" }
+            { "include": "source.terrabuild.lang#comments" },
+            { "include": "source.terrabuild.lang#strings" },
+            { "include": "source.terrabuild.lang#numbers" },
+            { "include": "source.terrabuild.lang#booleans" },
+            { "include": "source.terrabuild.lang#operators" },
+            { "include": "source.terrabuild.lang#lists" },
+            { "include": "source.terrabuild.lang#maps" },
+            { "include": "source.terrabuild.lang#function-calls" },
+            { "include": "source.terrabuild.lang#identifiers" }
           ]
         },
         {
@@ -47,17 +63,16 @@
           "end": "\\}",
           "patterns": [
             { "include": "#extension-attributes" },
-            {
-              "name": "meta.block.defaults",
-              "begin": "\\b(defaults)\\s*\\{",
-              "end": "\\}",
-              "patterns": [
-                { "include": "source.terrabuild.lang#maps" },
-                { "include": "source.terrabuild.lang#lists" },
-                { "include": "source.terrabuild.lang#function-calls" },
-                { "include": "source.terrabuild.lang#identifiers" }
-              ]
-            }
+            { "include": "source.terrabuild.lang#generic-blocks" },
+            { "include": "source.terrabuild.lang#comments" },
+            { "include": "source.terrabuild.lang#strings" },
+            { "include": "source.terrabuild.lang#numbers" },
+            { "include": "source.terrabuild.lang#booleans" },
+            { "include": "source.terrabuild.lang#operators" },
+            { "include": "source.terrabuild.lang#lists" },
+            { "include": "source.terrabuild.lang#maps" },
+            { "include": "source.terrabuild.lang#function-calls" },
+            { "include": "source.terrabuild.lang#identifiers" }
           ]
         },
         {
@@ -75,13 +90,16 @@
         {
           "name": "meta.block.locals",
           "begin": "\\b(locals)\\s*\\{",
-          "beginCaptures": {
-            "1": { "name": "keyword.control" }
-          },
           "end": "\\}",
           "patterns": [
-            { "include": "source.terrabuild.lang#maps" },
+            { "include": "source.terrabuild.lang#generic-blocks" },
+            { "include": "source.terrabuild.lang#comments" },
+            { "include": "source.terrabuild.lang#strings" },
+            { "include": "source.terrabuild.lang#numbers" },
+            { "include": "source.terrabuild.lang#booleans" },
+            { "include": "source.terrabuild.lang#operators" },
             { "include": "source.terrabuild.lang#lists" },
+            { "include": "source.terrabuild.lang#maps" },
             { "include": "source.terrabuild.lang#function-calls" },
             { "include": "source.terrabuild.lang#identifiers" }
           ]
