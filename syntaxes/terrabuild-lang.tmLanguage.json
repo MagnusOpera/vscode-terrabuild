@@ -66,21 +66,20 @@
       "patterns": [
         {
           "name": "meta.identifier.chain",
-          "begin": "\\b(project|var|local|target)\\b",
-          "beginCaptures": {
-            "0": { "name": "variable" }
-          },
-          "end": "(?!\\.)\\b",
-          "patterns": [
-            {
-              "name": "keyword.operator",
-              "match": "\\."
-            },
-            {
-              "name": "variable.other.read",
-              "match": "\\b[a-z][a-z0-9_-]*\\b"
-            }
-          ]
+          "match": "\\b(project|local|var|target)\\b((\\.(\\^?[a-zA-Z_][a-zA-Z0-9_]*))*)",
+          "captures": {
+            "1": { "name": "variable" },
+            "2": { "patterns": [
+              {
+                "name": "keyword.operator",
+                "match": "\\."
+              },
+              {
+                "name": "variable.other.read",
+                "match": "\\^?[a-zA-Z_][a-zA-Z0-9_]*"
+              }
+            ]}
+          }
         }
       ]
     },
