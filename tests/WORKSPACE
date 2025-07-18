@@ -17,7 +17,7 @@ target test {
 target dist {
     managed = false
     depends_on = [ target.build
-                   target.^dist.toto ]
+                   target.^dist ]
 }
 
 # plan deployment
