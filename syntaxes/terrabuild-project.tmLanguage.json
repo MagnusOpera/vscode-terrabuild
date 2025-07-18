@@ -15,7 +15,7 @@
           "begin": "\\b(project)\\s+(\\w+)\\s*\\{",
           "beginCaptures": {
             "1": { "name": "keyword.control" },
-            "2": { "name": "entity.name.function" }
+            "2": { "name": "variable.language" }
           },
           "end": "\\}",
           "patterns": [
@@ -29,7 +29,7 @@
           "begin": "\\b(target)\\s+(\\w+)\\s*\\{",
           "beginCaptures": {
             "1": { "name": "keyword.control" },
-            "2": { "name": "entity.name.function" }
+            "2": { "name": "variable.language" }
           },
           "end": "\\}",
           "patterns": [
@@ -43,7 +43,7 @@
           "begin": "\\b(extension)\\s+(@?[a-zA-Z_][a-zA-Z0-9_-]*)\\s*\\{",
           "beginCaptures": {
             "1": { "name": "keyword.control" },
-            "2": { "name": "entity.name.function" }
+            "2": { "name": "variable.language" }
           },
           "end": "\\}",
           "patterns": [

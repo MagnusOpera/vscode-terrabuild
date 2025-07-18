@@ -113,8 +113,8 @@
           "name": "meta.block",
           "begin": "\\b([a-zA-Z_@][a-zA-Z0-9_-]*)(\\s+@?[a-zA-Z0-9_.-]+)?\\s*\\{",
           "beginCaptures": {
-            "1": { "name": "variable.language" },
-            "2": { "name": "entity.name.function" }
+            "1": { "name": "entity.name.function" },
+            "2": { "name": "variable.language" }
           },
           "end": "\\}",
           "patterns": [
