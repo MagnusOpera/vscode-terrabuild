@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.10
+- Fix tests
+
 ## 0.0.9
 - Fix chained expression
 - Fix locals
