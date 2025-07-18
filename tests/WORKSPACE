@@ -81,7 +81,7 @@ extension @dotnet {
 extension @docker {
     defaults {
         platforms = local.runtimes.docker
-        image = "ghcr.io/matisclub/${terrabuild.project}"
+        image = "ghcr.io/magnusopera/${terrabuild.project}"
     }
 }
 

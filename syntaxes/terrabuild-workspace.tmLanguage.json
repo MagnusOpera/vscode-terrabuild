@@ -28,7 +28,8 @@
             { "include": "source.terrabuild.lang#lists" },
             { "include": "source.terrabuild.lang#maps" },
             { "include": "source.terrabuild.lang#function-calls" },
-            { "include": "source.terrabuild.lang#identifiers" }
+            { "include": "source.terrabuild.lang#identifiers" },
+            { "include": "source.terrabuild.lang#parameters" }
           ]
         },
         {
@@ -50,7 +51,8 @@
             { "include": "source.terrabuild.lang#lists" },
             { "include": "source.terrabuild.lang#maps" },
             { "include": "source.terrabuild.lang#function-calls" },
-            { "include": "source.terrabuild.lang#identifiers" }
+            { "include": "source.terrabuild.lang#identifiers" },
+            { "include": "source.terrabuild.lang#parameters" }
           ]
         },
         {
@@ -72,7 +74,8 @@
             { "include": "source.terrabuild.lang#lists" },
             { "include": "source.terrabuild.lang#maps" },
             { "include": "source.terrabuild.lang#function-calls" },
-            { "include": "source.terrabuild.lang#identifiers" }
+            { "include": "source.terrabuild.lang#identifiers" },
+            { "include": "source.terrabuild.lang#parameters" }
           ]
         },
         {
@@ -101,7 +104,8 @@
             { "include": "source.terrabuild.lang#lists" },
             { "include": "source.terrabuild.lang#maps" },
             { "include": "source.terrabuild.lang#function-calls" },
-            { "include": "source.terrabuild.lang#identifiers" }
+            { "include": "source.terrabuild.lang#identifiers" },
+            { "include": "source.terrabuild.lang#parameters" }
           ]
         }
       ]
