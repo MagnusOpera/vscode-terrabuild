@@ -82,6 +82,9 @@
         {
           "name": "meta.block.locals",
           "begin": "\\b(locals)\\s*\\{",
+          "beginCaptures": {
+            "1": { "name": "keyword.control" }
+          },
           "end": "\\}",
           "patterns": [
             { "include": "source.terrabuild.lang#generic-blocks" },
