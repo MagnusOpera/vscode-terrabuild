@@ -85,7 +85,7 @@
     "workspace-attributes": {
       "patterns": [
         {
-          "name": "variable",
+          "name": "variable.parameter",
           "match": "\\b(id|ignores)\\b(?=\\s*=)"
         }
       ]
@@ -93,7 +93,7 @@
     "target-attributes": {
       "patterns": [
         {
-          "name": "variable",
+          "name": "variable.parameter",
           "match": "\\b(rebuild|depends_on|managed)\\b(?=\\s*=)"
         }
       ]
@@ -101,7 +101,7 @@
     "variable-attributes": {
       "patterns": [
         {
-          "name": "variable",
+          "name": "variable.parameter",
           "match": "\\b(default|description)\\b(?=\\s*=)"
         }
       ]
@@ -109,7 +109,7 @@
     "extension-attributes": {
       "patterns": [
         {
-          "name": "variable",
+          "name": "variable.parameter",
           "match": "\\b(container|platform|variables|script|defaults)\\b(?=\\s*=)"
         }
       ]

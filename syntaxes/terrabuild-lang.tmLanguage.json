@@ -56,7 +56,7 @@
     "identifiers": {
       "patterns": [
         {
-          "name": "variable",
+          "name": "variable.parameter",
           "match": "\\b[a-zA-Z_@][a-zA-Z0-9_]*(\\.(\\[\"[^\"]+\"]|\\^?[a-zA-Z0-9_]+))*"
         }
       ]
@@ -90,9 +90,9 @@
           "patterns": [
             {
               "name": "variable.other.member",
-              "match": "\\b[a-zA-Z_][a-zA-Z0-9_.-]*\\b(?=\\s*:):"
+              "match": "\\b[a-zA-Z_][a-zA-Z0-9_.-]*\\b(?=\\s*:)"
             },
-            { "name": "punctuation.separator.key-value", "match": "\\b[a-zA-Z_][a-zA-Z0-9_.-]*\\b(?=\\s*:):" },
+            { "name": "punctuation.separator.key-value", "match": ":" },
             { "include": "#strings" },
             { "include": "#numbers" },
             { "include": "#booleans" },
@@ -129,7 +129,7 @@
             { "include": "#generic-blocks" },
             { "include": "#identifiers" },
             {
-              "name": "variable",
+              "name": "variable.parameter",
               "match": "\\b[a-zA-Z_][a-zA-Z0-9_-]*\\b(?=\\s*=)"
             },
             { "name": "keyword.operator.assignment", "match": "=" }

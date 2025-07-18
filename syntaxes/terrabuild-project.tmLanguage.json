@@ -77,7 +77,7 @@
     "project-attributes": {
       "patterns": [
         {
-          "name": "variable",
+          "name": "variable.parameter",
           "match": "\\b(depends_on|dependencies|outputs|ignores|includes|labels)\\b(?=\\s*=)"
         }
       ]
@@ -85,7 +85,7 @@
     "target-attributes": {
       "patterns": [
         {
-          "name": "variable",
+          "name": "variable.parameter",
           "match": "\\b(rebuild|outputs|depends_on|cache|managed)\\b(?=\\s*=)"
         }
       ]
@@ -93,7 +93,7 @@
     "extension-attributes": {
       "patterns": [
         {
-          "name": "variable",
+          "name": "variable.parameter",
           "match": "\\b(container|platform|variables|script|defaults)\\b(?=\\s*=)"
         }
       ]
