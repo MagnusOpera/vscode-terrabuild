@@ -1,21 +1,6 @@
 {
   "scopeName": "source.terrabuild.lang",
   "name": "Terrabuild Lang",
-  "patterns": [
-    { "include": "#comments" },
-    { "include": "#strings" },
-    { "include": "#numbers" },
-    { "include": "#booleans" },
-    { "include": "#operators" },
-    { "include": "#lists" },
-    { "include": "#maps" },
-    { "include": "#function-calls" },
-    { "include": "#generic-blocks" },
-    { "include": "#identifiers" },
-    { "include": "#parameters" },
-    { "include": "#shared-expressions" },
-    { "include": "#shared-values" }
-  ],
   "repository": {
     "comments": {
       "patterns": [
@@ -111,7 +96,7 @@
         }
       ]
     },
-    "generic-blocks": {
+    "blocks": {
       "patterns": [
         {
           "name": "meta.block",
@@ -122,11 +107,8 @@
           },
           "end": "\\}",
           "patterns": [
-            {
-              "name": "variable.parameter",
-              "match": "\\b[a-zA-Z_][a-zA-Z0-9_-]*\\b(?=\\s*=)"
-            },
-            { "include": "#shared-expressions" }
+            { "include": "#attributes" },
+            { "include": "#blocks" }
           ]
         }
       ]
@@ -148,6 +130,15 @@
           "name": "meta.function-call",
           "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\s*\\("
         }
+      ]
+    },
+    "attributes": {
+      "patterns": [
+        {
+            "name": "variable.parameter",
+            "match": "\\b[a-zA-Z_][a-zA-Z0-9_-]*\\b(?=\\s*=)"
+        },
+        { "include": "#shared-expressions" }
       ]
     },
     "shared-expressions": {
