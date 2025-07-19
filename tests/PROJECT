@@ -11,7 +11,7 @@ target build {
 target dist {
     outputs = []
 
-    @dotnet publish { single = true }
+    @dotnet tutu { single = true }
     @docker build {
         arguments = {
             base_tag: project.dotnet_runtime.version

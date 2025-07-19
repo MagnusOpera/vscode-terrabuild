@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.13
+- enforce snake_case
+
 # 0.0.12
 - factor blocks / attributes
 - fix functions
