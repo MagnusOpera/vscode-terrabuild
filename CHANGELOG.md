@@ -1,5 +1,11 @@
 # Change Log
 
+# 0.0.11
+- fix terrabuild vars
+- restrict attributes for wellknown blocks
+- restrict inner-blocks for wellknown blocks
+- wellknown attributes are keywords
+
 # 0.0.10
 - Fix tests
 
