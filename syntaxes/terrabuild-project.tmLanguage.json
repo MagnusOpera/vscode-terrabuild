@@ -46,7 +46,7 @@
           "end": "\\}",
           "patterns": [
             { "include": "#extension-attributes" },
-            { "include": "source.terrabuild.lang#generic-blocks" }
+            { "include": "#defaults-block" }
           ]
         },
         {
@@ -107,6 +107,25 @@
           "patterns": [
             { "include": "source.terrabuild.lang#parameters" },
             { "include": "source.terrabuild.lang#shared-expressions" }
+          ]
+        }
+      ]
+    },
+    "defaults-block": {
+      "patterns": [
+        {
+          "name": "meta.block.defaults",
+          "begin": "\\b(defaults)\\s*\\{",
+          "beginCaptures": {
+            "1": { "name": "keyword.control" }
+          },
+          "end": "\\}",
+          "patterns": [
+            {
+              "name": "variable.parameter",
+              "match": "\\b[a-zA-Z_][a-zA-Z0-9_-]*\\b(?=\\s*=)"
+            },
+            { "include": "source.terrabuild.lang#shared-expression" }
           ]
         }
       ]
