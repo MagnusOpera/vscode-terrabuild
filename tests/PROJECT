@@ -51,7 +51,7 @@ locals {
 
   regex = "prodfr" ~= "^prod.*"
 
-  expr_math_op = (1 + 42*2 + 4/4 - 3 <= 3)
+  expr_math_op = (1 + 42*2 + 4/4 - 3)
   expr_bool_op = 1 + 42 == 42 + 1 == false
   coalesce_op = nothing ?? "toto"
   ternary_op = true ? "titi" : "toto"
