@@ -107,9 +107,26 @@
     },
     "operators": {
       "patterns": [
-        { "name": "keyword.operator.arithmetic", "match": "\\+|\\-|\\*|\\/" },
-        { "name": "keyword.operator.comparison", "match": "==|!=|<=|>=|<|>|~=" },
-        { "name": "keyword.operator.logical", "match": "\\?|:|\\?\\?|&&|\\|\\||!" }
+        { "name": "keyword.operator.arithmetic.add", "match": "\\+" },
+        { "name": "keyword.operator.arithmetic.sub", "match": "\\-" },
+        { "name": "keyword.operator.arithmetic.mul", "match": "\\*" },
+        { "name": "keyword.operator.arithmetic.div", "match": "\\/" },
+    
+        { "name": "keyword.operator.comparison.eq", "match": "==" },
+        { "name": "keyword.operator.comparison.neq", "match": "!=" },
+        { "name": "keyword.operator.comparison.lte", "match": "<=" },
+        { "name": "keyword.operator.comparison.gte", "match": ">=" },
+        { "name": "keyword.operator.comparison.lt", "match": "<" },
+        { "name": "keyword.operator.comparison.gt", "match": ">" },
+        { "name": "keyword.operator.comparison.match", "match": "~=" },
+    
+        { "name": "keyword.operator.logical.and", "match": "&&" },
+        { "name": "keyword.operator.logical.or", "match": "\\|\\|" },
+        { "name": "keyword.operator.logical.not", "match": "!" },
+    
+        { "name": "keyword.operator.ternary.if", "match": "\\?" },
+        { "name": "keyword.operator.ternary.else", "match": ":" },
+        { "name": "keyword.operator.nullish.coalesce", "match": "\\?\\?" }
       ]
     },
     "functions": {

@@ -1,5 +1,8 @@
 # Change Log
 
+# next
+- specialize operators
+
 # 0.0.13
 - enforce snake_case
 - cleanup functions
