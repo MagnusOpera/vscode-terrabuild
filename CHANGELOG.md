@@ -2,6 +2,7 @@
 
 # 0.0.13
 - enforce snake_case
+- cleanup functions
 
 # 0.0.12
 - factor blocks / attributes
