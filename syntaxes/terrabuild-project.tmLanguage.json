@@ -20,17 +20,7 @@
           "end": "\\}",
           "patterns": [
             { "include": "#project-attributes" },
-            { "include": "source.terrabuild.lang#generic-blocks" },
-            { "include": "source.terrabuild.lang#comments" },
-            { "include": "source.terrabuild.lang#strings" },
-            { "include": "source.terrabuild.lang#numbers" },
-            { "include": "source.terrabuild.lang#booleans" },
-            { "include": "source.terrabuild.lang#operators" },
-            { "include": "source.terrabuild.lang#lists" },
-            { "include": "source.terrabuild.lang#maps" },
-            { "include": "source.terrabuild.lang#function-calls" },
-            { "include": "source.terrabuild.lang#identifiers" },
-            { "include": "source.terrabuild.lang#parameters" }
+            { "include": "source.terrabuild.lang#generic-blocks" }
           ]
         },
         {
@@ -43,17 +33,7 @@
           "end": "\\}",
           "patterns": [
             { "include": "#target-attributes" },
-            { "include": "source.terrabuild.lang#generic-blocks" },
-            { "include": "source.terrabuild.lang#comments" },
-            { "include": "source.terrabuild.lang#strings" },
-            { "include": "source.terrabuild.lang#numbers" },
-            { "include": "source.terrabuild.lang#booleans" },
-            { "include": "source.terrabuild.lang#operators" },
-            { "include": "source.terrabuild.lang#lists" },
-            { "include": "source.terrabuild.lang#maps" },
-            { "include": "source.terrabuild.lang#function-calls" },
-            { "include": "source.terrabuild.lang#identifiers" },
-            { "include": "source.terrabuild.lang#parameters" }
+            { "include": "source.terrabuild.lang#generic-blocks" }
           ]
         },
         {
@@ -66,17 +46,7 @@
           "end": "\\}",
           "patterns": [
             { "include": "#extension-attributes" },
-            { "include": "source.terrabuild.lang#generic-blocks" },
-            { "include": "source.terrabuild.lang#comments" },
-            { "include": "source.terrabuild.lang#strings" },
-            { "include": "source.terrabuild.lang#numbers" },
-            { "include": "source.terrabuild.lang#booleans" },
-            { "include": "source.terrabuild.lang#operators" },
-            { "include": "source.terrabuild.lang#lists" },
-            { "include": "source.terrabuild.lang#maps" },
-            { "include": "source.terrabuild.lang#function-calls" },
-            { "include": "source.terrabuild.lang#identifiers" },
-            { "include": "source.terrabuild.lang#parameters" }
+            { "include": "source.terrabuild.lang#generic-blocks" }
           ]
         },
         {
@@ -87,17 +57,8 @@
           },
           "end": "\\}",
           "patterns": [
-            { "include": "source.terrabuild.lang#generic-blocks" },
-            { "include": "source.terrabuild.lang#comments" },
-            { "include": "source.terrabuild.lang#strings" },
-            { "include": "source.terrabuild.lang#numbers" },
-            { "include": "source.terrabuild.lang#booleans" },
-            { "include": "source.terrabuild.lang#operators" },
-            { "include": "source.terrabuild.lang#lists" },
-            { "include": "source.terrabuild.lang#maps" },
-            { "include": "source.terrabuild.lang#function-calls" },
-            { "include": "source.terrabuild.lang#identifiers" },
-            { "include": "source.terrabuild.lang#parameters" }
+            { "include": "source.terrabuild.lang#parameters" },
+            { "include": "source.terrabuild.lang#shared-expressions" }
           ]
         }
       ]
@@ -105,24 +66,48 @@
     "project-attributes": {
       "patterns": [
         {
-          "name": "variable.parameter",
-          "match": "\\b(depends_on|dependencies|outputs|ignores|includes|labels)\\b(?=\\s*=)"
+          "name": "meta.assignment.workspace",
+          "begin": "\\b(depends_on|dependencies|outputs|ignores|includes|labels)\\b(?=\\s*=)",
+          "beginCaptures": {
+              "1": { "name": "variable.parameter" }
+          },
+          "end": "(?=$|\\n|\\r|,)",
+          "patterns": [
+            { "include": "source.terrabuild.lang#parameters" },
+            { "include": "source.terrabuild.lang#shared-expressions" }
+          ]
         }
       ]
     },
     "target-attributes": {
       "patterns": [
         {
-          "name": "variable.parameter",
-          "match": "\\b(rebuild|outputs|depends_on|cache|managed)\\b(?=\\s*=)"
+          "name": "meta.assignment.workspace",
+          "begin": "\\b(rebuild|outputs|depends_on|cache|managed)\\b(?=\\s*=)",
+          "beginCaptures": {
+              "1": { "name": "variable.parameter" }
+          },
+          "end": "(?=$|\\n|\\r|,)",
+          "patterns": [
+            { "include": "source.terrabuild.lang#parameters" },
+            { "include": "source.terrabuild.lang#shared-expressions" }
+          ]
         }
       ]
     },
     "extension-attributes": {
       "patterns": [
         {
-          "name": "variable.parameter",
-          "match": "\\b(container|platform|variables|script|defaults)\\b(?=\\s*=)"
+          "name": "meta.assignment.workspace",
+          "begin": "\\b(container|platform|variables|script|defaults)\\b(?=\\s*=)",
+          "beginCaptures": {
+              "1": { "name": "variable.parameter" }
+          },
+          "end": "(?=$|\\n|\\r|,)",
+          "patterns": [
+            { "include": "source.terrabuild.lang#parameters" },
+            { "include": "source.terrabuild.lang#shared-expressions" }
+          ]
         }
       ]
     }

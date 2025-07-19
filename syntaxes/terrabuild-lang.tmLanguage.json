@@ -12,7 +12,8 @@
     { "include": "#function-calls" },
     { "include": "#generic-blocks" },
     { "include": "#identifiers" },
-    { "include": "#parameters" }
+    { "include": "#parameters" },
+    { "include": "#shared-expressions" }
   ],
   "repository": {
     "comments": {
@@ -176,6 +177,20 @@
           "name": "meta.function-call",
           "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\s*\\("
         }
+      ]
+    },
+    "shared-expressions": {
+      "patterns": [
+        { "name": "keyword.operator.assignment", "match": "=" },
+        { "include": "#strings" },
+        { "include": "#numbers" },
+        { "include": "#booleans" },
+        { "include": "#operators" },
+        { "include": "#lists" },
+        { "include": "#maps" },
+        { "include": "#function-calls" },
+        { "include": "#identifiers" },
+        { "include": "#comments" }
       ]
     }
   }
