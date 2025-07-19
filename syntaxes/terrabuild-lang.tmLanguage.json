@@ -65,7 +65,7 @@
       "patterns": [
         {
           "name": "meta.identifier.chain",
-          "match": "\\b(project|local|var|target)\\b((\\.(\\^?[a-zA-Z_][a-zA-Z0-9_]*))*)",
+          "match": "\\b(project|local|var|target|terrabuild)\\b((\\.(\\^?[a-zA-Z_][a-zA-Z0-9_]*))*)",
           "captures": {
             "1": { "name": "variable" },
             "2": { "patterns": [
