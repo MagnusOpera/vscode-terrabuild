@@ -66,8 +66,7 @@
           },
           "end": "\\}",
           "patterns": [
-            { "include": "source.terrabuild.lang#parameters" },
-            { "include": "source.terrabuild.lang#shared-expressions" }
+            { "include": "source.terrabuild.lang#attributes" }
           ]
         }
       ]
@@ -82,8 +81,7 @@
           },
           "end": "(?=$|\\n|\\r|,)",
           "patterns": [
-            { "include": "source.terrabuild.lang#parameters" },
-            { "include": "source.terrabuild.lang#shared-expressions" }
+            { "include": "source.terrabuild.lang#attributes" }
           ]
         }
       ]
@@ -98,8 +96,7 @@
           },
           "end": "(?=$|\\n|\\r|,)",
           "patterns": [
-            { "include": "source.terrabuild.lang#parameters" },
-            { "include": "source.terrabuild.lang#shared-expressions" }
+            { "include": "source.terrabuild.lang#attributes" }
           ]
         }
       ]
@@ -114,8 +111,7 @@
           },
           "end": "(?=$|\\n|\\r|,)",
           "patterns": [
-            { "include": "source.terrabuild.lang#parameters" },
-            { "include": "source.terrabuild.lang#shared-expressions" }
+            { "include": "source.terrabuild.lang#attributes" }
           ]
         }
       ]
@@ -130,8 +126,7 @@
           },
           "end": "(?=$|\\n|\\r|,)",
           "patterns": [
-            { "include": "source.terrabuild.lang#parameters" },
-            { "include": "source.terrabuild.lang#shared-expressions" }
+            { "include": "source.terrabuild.lang#attributes" }
           ]
         }
       ]
