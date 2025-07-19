@@ -42,20 +42,21 @@
       "patterns": [
         {
           "name": "meta.identifier.chain",
-          "match": "\\b(project|local|var|target|terrabuild)\\b((\\.(\\^?[a-z]([_]?[a-z0-9]+)*))*)",
-          "captures": {
-            "1": { "name": "variable" },
-            "2": { "patterns": [
-              {
-                "name": "keyword.operator",
-                "match": "\\."
-              },
-              {
-                "name": "variable.other.read",
-                "match": "(\\^?[a-z]([_]?[a-z0-9]+)*)"
-              }
-            ]}
-          }
+          "begin": "\\b(project|local|var|target|terrabuild)\\b",
+          "beginCaptures": {
+            "1": { "name": "variable" }
+          },
+          "end": "(?!\\G)(?=\\s|\\)|\\]|,|$)",
+          "patterns": [
+            {
+              "name": "keyword.operator",
+              "match": "\\."
+            },
+            {
+              "name": "variable.other.read",
+              "match": "\\^?[a-z]([_]?[a-z0-9]+)*"
+            }
+          ]
         }
       ]
     },

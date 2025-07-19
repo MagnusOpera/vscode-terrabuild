@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.15
+- rework identifier matching
+
 # 0.0.14
 - specialize operators
 - remove unsupported operators
