@@ -29,7 +29,7 @@
     },
     "numbers": {
       "patterns": [
-        { "name": "constant.numeric", "match": "-?\\b\\d+(?:\\.\\d+)?\\b" }
+        { "name": "constant.numeric", "match": "-?\\b\\d+\\b" }
       ]
     },
     "booleans": {
