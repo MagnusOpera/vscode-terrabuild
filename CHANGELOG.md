@@ -1,7 +1,9 @@
 # Change Log
 
-# next
+# 0.0.14
 - specialize operators
+- remove unsupported operators
+- add support for .[]
 
 # 0.0.13
 - enforce snake_case

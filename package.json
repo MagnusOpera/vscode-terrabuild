@@ -3,7 +3,7 @@
   "name": "terrabuild",
   "displayName": "Terrabuild",
   "description": "Syntax highlighting for Terrabuild",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "publisher": "MagnusOpera",
   "license": "FSL-1.1-Apache-2.0",
   "repository": {
