@@ -102,3 +102,14 @@ locals {
   function_arity2 = trim("titi", 42)
   function_arity3 = trim("titi", 42, false)
 }
+
+# unknown block
+unknown {
+}
+
+unknown titi {
+}
+
+# invalid identifier
+target Titi {
+}

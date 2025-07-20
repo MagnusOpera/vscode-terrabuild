@@ -77,3 +77,7 @@ unknown {
 
 unknown titi {
 }
+
+# invalid identifier
+target Titi {
+}
