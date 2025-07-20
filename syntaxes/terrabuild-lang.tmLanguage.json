@@ -18,7 +18,7 @@
     },
     "property": {
       "begin": "\\.(?!\\*)",
-      "end": "[[:alpha:]][\\w-]*|\\d*",
+      "end": "\\^?[[:alpha:]][\\w-]*|\\d+",
       "comment": "Matches traversal attribute access such as .attr",
       "beginCaptures": {
         "0": {
@@ -61,7 +61,7 @@
               "match": "\\b(\\^?[a-z](_?[a-z0-9]+)*)\\b(?=\\s*:)"
             },
             { "name": "punctuation.separator.key-value", "match": ":" },
-            { "include": "#expressions" }
+            { "include": "#expressions" }        
           ]
         }
       ]
@@ -194,30 +194,15 @@
     },
     "expressions": {
       "patterns": [
-        {
-          "include": "#literal_values"
-        },
-        {
-          "include": "#operators"
-        },
-        {
-          "include": "#maps"
-        },
-        {
-          "include": "#lists"
-        },
-        {
-          "include": "#functions"
-        },
-        {
-          "include": "#parens"
-        },
-        {
-          "include": "#data"
-        },
-        {
-          "include": "#property"
-        }
+        { "include": "#comments" },
+        { "include": "#literal_values" },
+        { "include": "#operators" },
+        { "include": "#maps" },
+        { "include": "#lists" },
+        { "include": "#functions" },
+        { "include": "#parens" },
+        { "include": "#data" },
+        { "include": "#property" }
       ]
     },
     "parens": {
@@ -230,17 +215,11 @@
         }
       },
       "endCaptures": {
-        "0": {
-          "name": "punctuation.section.parens.end"
-        }
+        "0": { "name": "punctuation.section.parens.end" }
       },
       "patterns": [
-        {
-          "include": "#comments"
-        },
-        {
-          "include": "#expressions"
-        }
+        { "include": "#comments" },
+        { "include": "#expressions" }
       ]
     },
     "functions": {

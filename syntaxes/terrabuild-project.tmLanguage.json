@@ -117,7 +117,7 @@
           },
           "end": "\\}",
           "patterns": [
-            { "include": "source.terrabuild.lang#expressions" }
+            { "include": "source.terrabuild.lang#attributes" }
           ]
         }
       ]
