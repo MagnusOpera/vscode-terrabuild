@@ -1,5 +1,9 @@
 # Change Log
 
+# 0.0.16
+- fix string interpolation
+- cleanup syntax implementation
+
 # 0.0.15
 - rework identifier matching
 
