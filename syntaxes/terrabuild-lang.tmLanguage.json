@@ -18,14 +18,21 @@
     },
     "property": {
       "begin": "\\.(?!\\*)",
-      "end": "\\^?[[:alpha:]][\\w-]*|\\d+",
+      "end": "\\^?[a-z](_?[a-z0-9]+)*|\\d+",
       "beginCaptures": {
         "0": { "name": "keyword.operator.accessor" }
       },
       "endCaptures": {
         "0": {
           "patterns": [
-            { "name": "variable.other.member", "match": "[[:alpha:]][\\w-]*" }
+            {
+              "match": "\\^?[a-z](_?[a-z0-9]+)*",
+              "name": "variable.other.member"
+            },
+            {
+              "match": "\\d+",
+              "name": "constant.numeric"
+            }
           ]
         }
       }
@@ -183,7 +190,7 @@
     },
     "function": {
       "name": "meta.function-call",
-      "begin": "([:\\-\\w]+)(\\()",
+      "begin": "([a-z](_?[a-z0-9]+)*)(\\()",
       "end": "\\)",
       "beginCaptures": {
         "1": {
