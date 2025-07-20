@@ -12,7 +12,7 @@
       "patterns": [
         {
           "name": "meta.block.project",
-          "begin": "\\b(project)\\s+(\\w+)\\s*\\{",
+          "begin": "\\b(project)\\b(?:\\s+(\\w+))?\\s*\\{",
           "beginCaptures": {
             "1": { "name": "keyword.control" },
             "2": { "name": "variable.language" }
