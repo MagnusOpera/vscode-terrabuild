@@ -1,56 +1,57 @@
 
+# workspace block
 workspace {
+    # workspace definition
     id = "12334567abcd"
+
+    unknown = "toto"
 }
 
-# build projects
+# target block
 target build {
-    depends_on = [ target.^build ]
-}
-
-# test projects
-target test {
-    depends_on = [ target.build ]
-}
-
-# generate artifacts
-target dist {
+    # target definition
+    depends_on = [ # comment in list
+                   target.^build ]
+    rebuild = true
     managed = false
-    depends_on = [ target.build
-                   target.^dist ]
+
+    unknown = "toto"
 }
 
-# plan deployment
-target plan {
-    rebuild = terrabuild.retry
-    depends_on = [ target.dist
-                   target.^plan ]
-}
-# run deployment
-target apply {
-    managed = false
-    depends_on = [ target.plan
-                   target.^apply ]
+# extension
+extension @dotnet {
+    # extension
+    container = local.is_local_build ? nothing : "mcr.microsoft.com/dotnet/sdk:${local.docker_tags.dotnet_sdk}"
+    platform = "linux/arm64"
+    variables = [ "GOOGLE_*" ]
+    script = "../dotnet.fsx"
+    unknown = "toto"
+
+    defaults {
+        runtime = local.runtimes.dotnet
+        configuration = local.dotnet.config
+    }
 }
 
-target destroy {
-    managed = false
-}
-
-target serve {
-    depends_on = [ target.^serve ]
-}
-
+# variable
 variable toto {
-    defaults = "tagaga"
-    description = "pouet pouet"
+    # bindings
+    defaults = "tagada"
+    description = "this is the toto variable"
+
+    unknown = "toto"
 }
 
+
+# locals
 locals {
+    # bindings
     is_local_build = terrabuild.configuration == "local"
     target_env = terrabuild.environment ?? "dev"
 
-    dotnet = { config: local.is_local_build && local.target_env == "dev" ? "Debug" : "Release" }
+    dotnet = { # comment in map
+               config: local.is_local_build # comments inside expression
+                       && local.target_env == "dev" ? "Debug" : "Release" }
 
     terraform = { apps: local.target_env
                   infra: local.target_env ~= "^prod" ? "prod" : "dev" }
@@ -70,31 +71,9 @@ locals {
     }
 }
 
-extension @dotnet {
-    container = local.is_local_build ? nothing : "mcr.microsoft.com/dotnet/sdk:${local.docker_tags.dotnet_sdk}"
-    defaults {
-        runtime = local.runtimes.dotnet
-        configuration = local.dotnet.config
-    }
+# unknown block
+unknown {
 }
 
-extension @docker {
-    defaults {
-        platforms = local.runtimes.docker
-        image = "ghcr.io/magnusopera/${terrabuild.project}"
-    }
-}
-
-extension @npm {
-    container = local.is_local_build ? nothing : "node:${local.docker_tags.nodejs}"
-}
-
-extension @openapi {
-    container = "openapitools/openapi-generator-cli:${local.docker_tags.openapi}"
-}
-
-extension @terraform {
-    container = "hashicorp/terraform:${local.docker_tags.terraform}"
-    variables = [ "GOOGLE_APPLICATION_CREDENTIALS"
-                  "TF_*" ]
+unknown titi {
 }

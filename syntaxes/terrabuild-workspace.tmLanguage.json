@@ -5,8 +5,7 @@
   "fileTypes": [],
   "patterns": [
     { "include": "source.terrabuild.lang#comments" },
-    { "include": "#workspace-blocks" },
-    { "include": "source.terrabuild.lang" }
+    { "include": "#workspace-blocks" }
   ],
   "repository": {
     "workspace-blocks": {
@@ -19,7 +18,8 @@
           },
           "end": "\\}",
           "patterns": [
-            { "include": "#workspace-attributes" }
+            { "include": "#workspace-attributes" },
+            { "include": "source.terrabuild.lang#comments" }
           ]
         },
         {
@@ -31,7 +31,8 @@
           },
           "end": "\\}",
           "patterns": [
-            { "include": "#target-attributes" }
+            { "include": "#target-attributes" },
+            { "include": "source.terrabuild.lang#comments" }
           ]
         },
         {
@@ -44,7 +45,8 @@
           "end": "\\}",
           "patterns": [
             { "include": "#extension-attributes" },
-            { "include": "#defaults-block" }
+            { "include": "#defaults-block" },
+            { "include": "source.terrabuild.lang#comments" }
           ]
         },
         {
@@ -56,7 +58,8 @@
           },
           "end": "\\}",
           "patterns": [
-            { "include": "#variable-attributes" }
+            { "include": "#variable-attributes" },
+            { "include": "source.terrabuild.lang#comments" }
           ]
         },
         {
@@ -67,7 +70,8 @@
           },
           "end": "\\}",
           "patterns": [
-            { "include": "source.terrabuild.lang#attributes" }
+            { "include": "source.terrabuild.lang#attribute" },
+            { "include": "source.terrabuild.lang#comments" }
           ]
         }
       ]
@@ -82,7 +86,7 @@
           },
           "end": "(?=$|\\n|\\r|,)",
           "patterns": [
-            { "include": "source.terrabuild.lang#expressions" }
+            { "include": "source.terrabuild.lang#expression" }
           ]
         }
       ]
@@ -97,7 +101,7 @@
           },
           "end": "(?=$|\\n|\\r|,)",
           "patterns": [
-            { "include": "source.terrabuild.lang#expressions" }
+            { "include": "source.terrabuild.lang#expression" }
           ]
         }
       ]
@@ -112,7 +116,7 @@
           },
           "end": "(?=$|\\n|\\r|,)",
           "patterns": [
-            { "include": "source.terrabuild.lang#expressions" }
+            { "include": "source.terrabuild.lang#expression" }
           ]
         }
       ]
@@ -127,7 +131,7 @@
           },
           "end": "(?=$|\\n|\\r|,)",
           "patterns": [
-            { "include": "source.terrabuild.lang#expressions" }
+            { "include": "source.terrabuild.lang#expression" }
           ]
         }
       ]
@@ -142,7 +146,7 @@
           },
           "end": "\\}",
           "patterns": [
-            { "include": "source.terrabuild.lang#attributes" }
+            { "include": "source.terrabuild.lang#attribute" }
           ]
         }
       ]

@@ -1,18 +1,38 @@
-
+# project with id
 project api {
-    labels = [ "app" ] 
+    # project definition
+    depends_on = [ project.libs
+                   project.security ]
+    dependencies = [ "../other/project" ]
+    outputs = [ "**/a.out" ]
+    ignores = [ "**/*.obj" ]
+    includes = [ "**/*.cpp"
+                 "**/*.h" ]
+    labels = [ "app" ]
+
+    unknown = "toto"
+
     @dotnet titi {
         container = local.is_local_build ? nothing : "mcr.microsoft.com/dotnet/sdk:${local.docker_tags.dotnet_sdk}"
-        container = local.is_local_build ? nothing : "mcr.microsoft.com/dotnet/sdk:${local.docker_tags.dotnet_sdk}"
+        init = true
     }
 }
 
-target build {
-    @dotnet build { }
+# project without id
+project {
 }
 
+# target
 target dist {
+     target definition
+    rebuild = true
+    depends_on = [ target.build
+                   target.^dist ]
+    cache = "always"
+    managed = false
     outputs = []
+
+    unknown = "toto"
 
     @dotnet tutu { single = true }
     @docker build {
@@ -22,12 +42,24 @@ target dist {
             configuration: local.dotnet.config } }
 }
 
-target serve {
-    @dotnet watch { arguments = "run" }
+# extension
+extension @dotnet {
+    # extension
+    container = local.is_local_build ? nothing : "mcr.microsoft.com/dotnet/sdk:${local.docker_tags.dotnet_sdk}"
+    platform = "linux/arm64"
+    variables = [ "GOOGLE_*" ]
+    script = "../dotnet.fsx"
+    unknown = "toto"
+
+    defaults {
+        runtime = local.runtimes.dotnet
+        configuration = local.dotnet.config
+    }
 }
 
-
+# locals
 locals {
+  # bindings
   string = "toto"
   number = 42
   negative_number = -42
@@ -69,27 +101,4 @@ locals {
   function_arity1 = trim("titi")
   function_arity2 = trim("titi", 42)
   function_arity3 = trim("titi", 42, false)
-}
-
-
-extension @docker {
-    container = local.is_local_build ? nothing : "mcr.microsoft.com/dotnet/sdk:${local.docker_tags.dotnet_sdk}"
-    defaults {
-        platforms = local.runtimes.docker
-        image = "ghcr.io/magnusopera/${terrabuild.project}"
-    }
-}
-
-extension @npm {
-    container = local.is_local_build ? nothing : "node:${local.docker_tags.nodejs}"
-}
-
-extension @openapi {
-    container = "openapitools/openapi-generator-cli:${local.docker_tags.openapi}"
-}
-
-extension @terraform {
-    container = "hashicorp/terraform:${local.docker_tags.terraform}"
-    variables = [ "GOOGLE_APPLICATION_CREDENTIALS"
-                  "TF_*" ]
 }
