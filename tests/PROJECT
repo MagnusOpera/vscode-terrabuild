@@ -68,3 +68,25 @@ locals {
   function_arity3 = trim("titi", 42, false)
 }
 
+
+extension @docker {
+    container = local.is_local_build ? nothing : "mcr.microsoft.com/dotnet/sdk:${local.docker_tags.dotnet_sdk}"
+    defaults {
+        platforms = local.runtimes.docker
+        image = "ghcr.io/magnusopera/${terrabuild.project}"
+    }
+}
+
+extension @npm {
+    container = local.is_local_build ? nothing : "node:${local.docker_tags.nodejs}"
+}
+
+extension @openapi {
+    container = "openapitools/openapi-generator-cli:${local.docker_tags.openapi}"
+}
+
+extension @terraform {
+    container = "hashicorp/terraform:${local.docker_tags.terraform}"
+    variables = [ "GOOGLE_APPLICATION_CREDENTIALS"
+                  "TF_*" ]
+}

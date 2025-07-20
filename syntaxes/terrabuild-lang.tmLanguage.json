@@ -54,7 +54,7 @@
             },
             {
               "name": "variable.other.read",
-              "match": "\\^?[a-z]([_]?[a-z0-9]+)*"
+              "match": "\\^?[a-z](_?[a-z0-9]+)*"
             }
           ]
         }
@@ -81,7 +81,7 @@
           "patterns": [
             {
               "name": "variable.other.member",
-              "match": "\\b(\\^?[a-z]([_]?[a-z0-9]+)*)\\b(?=\\s*:)"
+              "match": "\\b(\\^?[a-z](_?[a-z0-9]+)*)\\b(?=\\s*:)"
             },
             { "name": "punctuation.separator.key-value", "match": ":" },
             { "include": "#values" }
@@ -93,7 +93,7 @@
       "patterns": [
         {
           "name": "meta.block",
-          "begin": "(?:\\s*)(@?[a-z]([_]?[a-z0-9]+)*)(?:\\s+([a-z]([_]?[a-z0-9]+)*))?\\s*\\{",
+          "begin": "(?:\\s*)(@?[a-z](_?[a-z0-9]+)*)(?:\\s+([a-z](_?[a-z0-9]+)*))?\\s*\\{",
           "beginCaptures": {
             "1": { "name": "entity.name.function" },
             "3": { "name": "variable.language" }
@@ -140,7 +140,7 @@
       "patterns": [
         {
             "name": "variable.parameter",
-            "match": "\\b([a-z]([_]?[a-z0-9]+)*)\\b(?=\\s*=)"
+            "match": "\\b([a-z](_?[a-z0-9]+)*)\\b(?=\\s*=)"
         },
         { "include": "#values" }
       ]

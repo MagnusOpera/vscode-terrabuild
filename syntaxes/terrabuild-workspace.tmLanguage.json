@@ -18,24 +18,26 @@
           },
           "end": "\\}",
           "patterns": [
-            { "include": "#workspace-attributes" }
+            { "include": "#workspace-attributes" },
+            { "include": "source.terrabuild.lang#comments" }
           ]
         },
         {
           "name": "meta.block.target",
-          "begin": "\\b(target)\\s+(\\w+)\\s*\\{",
+          "begin": "\\b(target)\\s+([a-z](_?[a-z0-9]+)*)\\s*\\{",
           "beginCaptures": {
             "1": { "name": "keyword.control" },
             "2": { "name": "variable.language" }
           },
           "end": "\\}",
           "patterns": [
-            { "include": "#target-attributes" }
+            { "include": "#target-attributes" },
+            { "include": "source.terrabuild.lang#comments" }
           ]
         },
         {
           "name": "meta.block.extension",
-          "begin": "\\b(extension)\\s+(@?[a-zA-Z_][a-zA-Z0-9_-]*)\\s*\\{",
+          "begin": "\\b(extension)\\s+(@?[a-z](_?[a-z0-9]+)*)\\s*\\{",
           "beginCaptures": {
             "1": { "name": "keyword.control" },
             "2": { "name": "variable.language" }
@@ -43,19 +45,21 @@
           "end": "\\}",
           "patterns": [
             { "include": "#extension-attributes" },
-            { "include": "#defaults-block" }
+            { "include": "#defaults-block" },
+            { "include": "source.terrabuild.lang#comments" }
           ]
         },
         {
           "name": "meta.block.variable",
-          "begin": "\\b(variable)\\s+(@?[a-zA-Z_][a-zA-Z0-9_-]*)\\s*\\{",
+          "begin": "\\b(variable)\\s+([a-z](_?[a-z0-9]+)*)\\s*\\{",
           "beginCaptures": {
             "1": { "name": "keyword.control" },
             "2": { "name": "variable.language" }
           },
           "end": "\\}",
           "patterns": [
-            { "include": "#variable-attributes" }
+            { "include": "#variable-attributes" },
+            { "include": "source.terrabuild.lang#comments" }
           ]
         },
         {
@@ -66,7 +70,8 @@
           },
           "end": "\\}",
           "patterns": [
-            { "include": "source.terrabuild.lang#attributes" }
+            { "include": "source.terrabuild.lang#attributes" },
+            { "include": "source.terrabuild.lang#comments" }
           ]
         }
       ]
@@ -81,7 +86,7 @@
           },
           "end": "(?=$|\\n|\\r|,)",
           "patterns": [
-            { "include": "source.terrabuild.lang#attributes" }
+            { "include": "source.terrabuild.lang#values" }
           ]
         }
       ]
@@ -96,7 +101,7 @@
           },
           "end": "(?=$|\\n|\\r|,)",
           "patterns": [
-            { "include": "source.terrabuild.lang#attributes" }
+            { "include": "source.terrabuild.lang#values" }
           ]
         }
       ]
@@ -111,7 +116,7 @@
           },
           "end": "(?=$|\\n|\\r|,)",
           "patterns": [
-            { "include": "source.terrabuild.lang#attributes" }
+            { "include": "source.terrabuild.lang#values" }
           ]
         }
       ]
@@ -120,13 +125,13 @@
       "patterns": [
         {
           "name": "meta.assignment.workspace",
-          "begin": "\\b(container|platform|variables|script|defaults)\\b(?=\\s*=)",
+          "begin": "\\b(container|platform|variables|script)\\b(?=\\s*=)",
           "beginCaptures": {
               "1": { "name": "keyword.control" }
           },
           "end": "(?=$|\\n|\\r|,)",
           "patterns": [
-            { "include": "source.terrabuild.lang#attributes" }
+            { "include": "source.terrabuild.lang#values" }
           ]
         }
       ]
