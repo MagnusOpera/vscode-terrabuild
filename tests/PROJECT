@@ -1,7 +1,10 @@
 
 project api {
-    labels = [ "app" ]
-    @dotnet { }
+    labels = [ "app" ] 
+    @dotnet titi {
+        container = local.is_local_build ? nothing : "mcr.microsoft.com/dotnet/sdk:${local.docker_tags.dotnet_sdk}"
+        container = local.is_local_build ? nothing : "mcr.microsoft.com/dotnet/sdk:${local.docker_tags.dotnet_sdk}"
+    }
 }
 
 target build {

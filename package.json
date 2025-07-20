@@ -26,6 +26,11 @@
   "contributes": {
     "languages": [
       {
+        "id": "terrabuild-lang",
+        "aliases": ["Terrabuild Lang"],
+        "configuration": "./language-configuration.json"
+      },
+      {
         "id": "terrabuild-workspace",
         "aliases": ["Terrabuild Workspace"],
         "filenames": ["WORKSPACE"],
@@ -40,6 +45,7 @@
     ],
     "grammars": [
       {
+        "language": "terrabuild-lang",
         "scopeName": "source.terrabuild.lang",
         "path": "./syntaxes/terrabuild-lang.tmLanguage.json"
       },
