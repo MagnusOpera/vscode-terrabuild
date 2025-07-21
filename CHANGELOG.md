@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.18
+- revert icon support
+
 # 0.0.17
 - add icons for supported file types
 
