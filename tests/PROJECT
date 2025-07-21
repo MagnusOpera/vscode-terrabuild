@@ -24,7 +24,7 @@ project {
 
 # target
 target dist {
-     target definition
+    # target definition
     rebuild = true
     depends_on = [ target.build
                    target.^dist ]

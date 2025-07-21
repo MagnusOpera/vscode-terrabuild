@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.19
+- update classifiers
+
 # 0.0.18
 - revert icon support
 
