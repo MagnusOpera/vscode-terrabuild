@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.17
+- add icons for supported file types
+
 # 0.0.16
 - fix string interpolation
 - cleanup syntax implementation

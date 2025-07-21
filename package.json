@@ -3,7 +3,7 @@
   "name": "terrabuild",
   "displayName": "Terrabuild",
   "description": "Syntax highlighting for Terrabuild",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "publisher": "MagnusOpera",
   "license": "FSL-1.1-Apache-2.0",
   "repository": {
@@ -24,6 +24,13 @@
     "terrabuild"
   ],
   "contributes": {
+    "iconThemes": [
+      {
+        "id": "terrabuild-icons",
+        "label": "Terrabuild Icons",
+        "path": "./file-icons.json"
+      }
+    ],
     "languages": [
       {
         "id": "terrabuild-lang",
