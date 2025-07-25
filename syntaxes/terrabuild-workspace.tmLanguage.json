@@ -95,7 +95,7 @@
       "patterns": [
         {
           "name": "meta.assignment.workspace",
-          "begin": "\\b(rebuild|depends_on|managed)\\b(?=\\s*=)",
+          "begin": "\\b(rebuild|depends_on|managed|restore)\\b(?=\\s*=)",
           "beginCaptures": {
               "1": { "name": "keyword.control" }
           },

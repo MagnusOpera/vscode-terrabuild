@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.20
+- add support for `restore` attribute
+
 # 0.0.19
 - update classifiers
 

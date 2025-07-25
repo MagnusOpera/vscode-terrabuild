@@ -14,6 +14,7 @@ target build {
                    target.^build ]
     rebuild = true
     managed = false
+    restore = true
 
     unknown = "toto"
 }
