@@ -13,7 +13,7 @@ target build {
     depends_on = [ # comment in list
                    target.^build ]
     rebuild = true
-    managed = false
+    ephemeral = false
     restore = true
 
     unknown = "toto"

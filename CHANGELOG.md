@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.21
+- add support for `ephemeral` attribute and remove `managed`
+
 # 0.0.20
 - add support for `restore` attribute
 
