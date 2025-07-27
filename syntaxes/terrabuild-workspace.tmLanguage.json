@@ -80,7 +80,7 @@
       "patterns": [
         {
           "name": "meta.assignment.workspace",
-          "begin": "\\b(id|ignores)\\b(?=\\s*=)",
+          "begin": "\\b(id|ignores|version)\\b(?=\\s*=)",
           "beginCaptures": {
               "1": { "name": "keyword.control" }
           },

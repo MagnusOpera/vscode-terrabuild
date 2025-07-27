@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.22
+- add support for `version` attribute
+
 # 0.0.21
 - add support for `ephemeral` attribute and remove `managed`
 

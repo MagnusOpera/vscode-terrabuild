@@ -3,6 +3,8 @@
 workspace {
     # workspace definition
     id = "12334567abcd"
+    ignores = [ "obj/**" ]
+    version = "~0.157.0"
 
     unknown = "toto"
 }
