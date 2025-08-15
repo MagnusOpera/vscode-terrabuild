@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.23
+- add support for `cache` attribute on workspace target
+
 # 0.0.22
 - add support for `version` attribute
 
