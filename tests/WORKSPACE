@@ -17,6 +17,7 @@ target build {
     rebuild = true
     ephemeral = false
     restore = true
+    cache = "local"
 
     unknown = "toto"
 }
