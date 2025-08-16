@@ -28,11 +28,9 @@ target dist {
     rebuild = true
     depends_on = [ target.build
                    target.^dist ]
-    cache = "always"
-    ephemeral = false
     outputs = []
-    restore = false
     cache = "remote"
+    deferred = false
 
     unknown = "toto"
 

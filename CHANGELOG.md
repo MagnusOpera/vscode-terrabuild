@@ -1,5 +1,9 @@
 # Change Log
 
+# 0.0.24
+- remove `ephemeral` and `restore` attribute on workspace and project targets
+- add `deferred` on workspace and project targets
+
 # 0.0.23
 - add support for `cache` attribute on workspace target
 
