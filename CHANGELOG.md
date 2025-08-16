@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.25
+- add `idempotent` target
+
 # 0.0.24
 - remove `ephemeral` and `restore` attribute on workspace and project targets
 - add `deferred` on workspace and project targets
