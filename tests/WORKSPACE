@@ -16,7 +16,6 @@ target build {
                    target.^build ]
     cache = "local"
     rebuild = true
-    deferred = true
     idempotent = false
 
     unknown = "toto"

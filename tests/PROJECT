@@ -30,7 +30,6 @@ target dist {
                    target.^dist ]
     outputs = []
     cache = "remote"
-    deferred = false
     idempotent = true
 
     unknown = "toto"

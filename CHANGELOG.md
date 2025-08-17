@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.26
+- remove `deferred` target
+
 # 0.0.25
 - add `idempotent` target
 
