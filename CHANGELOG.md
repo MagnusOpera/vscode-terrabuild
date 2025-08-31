@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.27
+- add support for `inline` target
+
 # 0.0.26
 - remove `deferred` target
 

@@ -17,6 +17,7 @@ target build {
     cache = "local"
     rebuild = true
     idempotent = false
+    inline = true
 
     unknown = "toto"
 }

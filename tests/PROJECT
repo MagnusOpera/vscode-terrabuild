@@ -31,6 +31,7 @@ target dist {
     outputs = []
     cache = "remote"
     idempotent = true
+    inline = true
 
     unknown = "toto"
 
