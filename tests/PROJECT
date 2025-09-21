@@ -30,9 +30,6 @@ target dist {
                    target.^dist ]
     outputs = []
     cache = "remote"
-    idempotent = true
-    inline = true
-
     unknown = "toto"
 
     @dotnet tutu { single = true }
@@ -50,6 +47,7 @@ extension @dotnet {
     platform = "linux/arm64"
     variables = [ "GOOGLE_*" ]
     script = "../dotnet.fsx"
+    batch = true
     unknown = "toto"
 
     defaults {

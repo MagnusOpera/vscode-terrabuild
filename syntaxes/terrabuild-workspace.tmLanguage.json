@@ -95,7 +95,7 @@
       "patterns": [
         {
           "name": "meta.assignment.workspace",
-          "begin": "\\b(depends_on|cache|rebuild|idempotent|inline)\\b(?=\\s*=)",
+          "begin": "\\b(depends_on|cache|rebuild)\\b(?=\\s*=)",
           "beginCaptures": {
               "1": { "name": "keyword.control" }
           },
@@ -125,7 +125,7 @@
       "patterns": [
         {
           "name": "meta.assignment.workspace",
-          "begin": "\\b(container|platform|variables|script)\\b(?=\\s*=)",
+          "begin": "\\b(container|platform|variables|script|batch)\\b(?=\\s*=)",
           "beginCaptures": {
               "1": { "name": "keyword.control" }
           },

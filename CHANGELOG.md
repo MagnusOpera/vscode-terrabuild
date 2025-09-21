@@ -1,5 +1,9 @@
 # Change Log
 
+# 0.0.28
+- remove `inline` and `idempotent` attributes on target
+- add `batch` attribute on extension
+
 # 0.0.27
 - add support for `inline` target
 
