@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.30
+- update enum syntax to ~<identifier>
+
 # 0.0.29
 - add support for enum
 

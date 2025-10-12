@@ -132,7 +132,7 @@
       "patterns": [
         {
           "name": "constant.other.symbol.enum",
-          "match": ":[a-z](_?[a-z0-9]+)*"
+          "match": "~[a-z](_?[a-z0-9]+)*"
         }
       ]
     },

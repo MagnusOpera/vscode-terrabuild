@@ -25,11 +25,11 @@ project {
 # target
 target dist {
     # target definition
-    rebuild = :auto
+    rebuild = ~auto
     depends_on = [ target.build
                    target.^dist ]
     outputs = []
-    cache = :remote
+    cache = ~remote
     unknown = "toto"
 
     @dotnet tutu { single = true }
@@ -61,7 +61,7 @@ locals {
   # bindings
   string = "toto"
   number = 42
-  enum = :tagada
+  enum = ~tagada
   negative_number = -42
   map = { a: 42
           b: 666}
