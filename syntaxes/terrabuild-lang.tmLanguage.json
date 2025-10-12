@@ -119,12 +119,21 @@
       "patterns": [
         { "include": "#numeric_literal" },
         { "include": "#language_constant" },
+        { "include": "#enum_literal" },
         { "include": "#string_literal" }
       ]
     },
     "numeric_literal": {
       "patterns": [
         { "name": "constant.numeric", "match": "\\b\\d+\\b" }
+      ]
+    },
+    "enum_literal": {
+      "patterns": [
+        {
+          "name": "constant.other.symbol.enum",
+          "match": ":[a-z](_?[a-z0-9]+)*"
+        }
       ]
     },
     "language_constant": {

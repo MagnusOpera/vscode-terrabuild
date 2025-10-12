@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.29
+- add support for enum
+
 # 0.0.28
 - remove `inline` and `idempotent` attributes on target
 - add `batch` attribute on extension
