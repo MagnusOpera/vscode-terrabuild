@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.31
+- rename `cache` as `artifacts`
+
 # 0.0.30
 - update enum syntax to ~<identifier>
 
