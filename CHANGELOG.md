@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.33
+- add `configuration` and `environment` attributes
+
 # 0.0.32
 - add `engine` attribute
 

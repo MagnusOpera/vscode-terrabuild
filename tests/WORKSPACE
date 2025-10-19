@@ -6,6 +6,8 @@ workspace {
     ignores = [ "obj/**" ]
     version = "~0.157.0"
     engine = ~docker
+    configuration = "local"
+    environment = "dev"
 
     unknown = "toto"
 }
