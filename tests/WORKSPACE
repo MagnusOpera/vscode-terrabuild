@@ -5,6 +5,7 @@ workspace {
     id = "12334567abcd"
     ignores = [ "obj/**" ]
     version = "~0.157.0"
+    engine = ~docker
 
     unknown = "toto"
 }

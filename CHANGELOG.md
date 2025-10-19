@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.32
+- add `engine` attribute
+
 # 0.0.31
 - rename `cache` as `artifacts`
 
