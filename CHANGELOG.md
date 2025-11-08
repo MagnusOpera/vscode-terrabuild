@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.34
+- rename `container` attribute as `image`
+
 # 0.0.33
 - add `configuration` and `environment` attributes
 

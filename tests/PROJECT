@@ -13,7 +13,7 @@ project api {
     unknown = "toto"
 
     @dotnet titi {
-        container = local.is_local_build ? nothing : "mcr.microsoft.com/dotnet/sdk:${local.docker_tags.dotnet_sdk}"
+        image = local.is_local_build ? nothing : "mcr.microsoft.com/dotnet/sdk:${local.docker_tags.dotnet_sdk}"
         init = true
     }
 }
@@ -43,7 +43,7 @@ target dist {
 # extension
 extension @dotnet {
     # extension
-    container = local.is_local_build ? nothing : "mcr.microsoft.com/dotnet/sdk:${local.docker_tags.dotnet_sdk}"
+    image = local.is_local_build ? nothing : "mcr.microsoft.com/dotnet/sdk:${local.docker_tags.dotnet_sdk}"
     platform = "linux/arm64"
     variables = [ "GOOGLE_*" ]
     script = "../dotnet.fsx"
