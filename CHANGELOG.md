@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.35
+- rename `rebuild` attribute as `build`
+
 # 0.0.34
 - rename `container` attribute as `image`
 

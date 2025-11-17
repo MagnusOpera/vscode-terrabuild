@@ -18,7 +18,7 @@ target build {
     depends_on = [ # comment in list
                    target.^build ]
     artifacts = ~local
-    rebuild = true
+    build = true
 
     unknown = "toto"
 }

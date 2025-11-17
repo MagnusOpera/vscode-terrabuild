@@ -25,7 +25,7 @@ project {
 # target
 target dist {
     # target definition
-    rebuild = ~auto
+    build = ~auto
     depends_on = [ target.build
                    target.^dist ]
     outputs = []
