@@ -24,8 +24,8 @@ jobs:
       - name: 📋 Validate package.json
         run: npx --yes jsonlint-cli package.json
 
-      - name: 🛠️ Install vsce
-        run: npm install -g @vscode/vsce@3.5
+      - name: 🛠️ Install vsce and ovsx
+        run: npm install -g @vscode/vsce@3.5 ovsx@0.9
 
       - name: 📦 Package VS Code extension
         run: vsce package
@@ -34,3 +34,10 @@ jobs:
         run: vsce publish --pat ${{ secrets.VSCE_TOKEN }}
         env:
           VSCE_TOKEN: ${{ secrets.VSCE_TOKEN }}
+
+      - name: 🚀 Publish to Open VSX
+        run: |
+          VSIX_FILE=$(ls -1 *.vsix | head -n 1)
+          ovsx publish "$VSIX_FILE" --pat ${{ secrets.OPEN_VSX_TOKEN }}
+        env:
+          OPEN_VSX_TOKEN: ${{ secrets.OPEN_VSX_TOKEN }}
