@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.36
+- publish to open-vsx
+
 # 0.0.35
 - rename `rebuild` attribute as `build`
 
