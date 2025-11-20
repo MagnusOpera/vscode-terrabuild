@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.37
+- downgrade vscode version requirement to allow running the extension on Cursor
+
 # 0.0.36
 - publish to open-vsx
 
