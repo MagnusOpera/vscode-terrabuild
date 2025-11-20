@@ -44,6 +44,7 @@
           "begin": "\\[",
           "end": "\\]",
           "patterns": [
+            { "name": "punctuation.separator.sequence", "match": "," },
             { "include": "#expression" }
           ]
         }
@@ -58,6 +59,7 @@
           "patterns": [
             { "name": "variable.other.constant", "match": "\\b(\\^?[a-z](_?[a-z0-9]+)*)\\b(?=\\s*:)" },
             { "name": "punctuation.separator.key-value", "match": ":" },
+            { "name": "punctuation.separator.sequence", "match": "," },
             { "include": "#expression" }        
           ]
         }

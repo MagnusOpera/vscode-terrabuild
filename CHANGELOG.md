@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.38
+- add support for optional comma in list and map
+
 # 0.0.37
 - downgrade vscode version requirement to allow running the extension on Cursor
 

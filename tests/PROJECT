@@ -1,13 +1,11 @@
 # project with id
 project api {
     # project definition
-    depends_on = [ project.libs
-                   project.security ]
+    depends_on = [ project.libs, project.security ]
     dependencies = [ "../other/project" ]
     outputs = [ "**/a.out" ]
     ignores = [ "**/*.obj" ]
-    includes = [ "**/*.cpp"
-                 "**/*.h" ]
+    includes = [ "**/*.cpp", "**/*.h" ]
     labels = [ "app" ]
 
     unknown = "toto"
