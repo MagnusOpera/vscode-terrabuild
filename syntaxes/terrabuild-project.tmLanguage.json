@@ -70,7 +70,7 @@
       "patterns": [
         {
           "name": "meta.assignment.workspace",
-          "begin": "\\b(depends_on|dependencies|outputs|ignores|includes|labels)\\b(?=\\s*=)",
+          "begin": "\\b(depends_on|dependencies|outputs|ignores|includes|labels|environments)\\b(?=\\s*=)",
           "beginCaptures": {
               "1": { "name": "keyword.control" }
           },
