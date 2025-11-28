@@ -48,6 +48,10 @@ variable toto {
     unknown = "toto"
 }
 
+variable INFRA_ENV {
+    description = "infra"
+}
+
 
 # locals
 locals {

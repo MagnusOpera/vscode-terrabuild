@@ -2,7 +2,6 @@
 project api {
     # project definition
     depends_on = [ project.libs, project.security ]
-    dependencies = [ "../other/project" ]
     outputs = [ "**/a.out" ]
     ignores = [ "**/*.obj" ]
     includes = [ "**/*.cpp", "**/*.h" ]

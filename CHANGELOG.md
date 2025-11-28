@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.40
+- remove `dependencies` on `project` block
+
 # 0.0.39
 - add support for `environments` attribute on `project` block
 
