@@ -24,7 +24,7 @@
         },
         {
           "name": "meta.block.target",
-          "begin": "\\b(target)\\s+([a-z](_?[a-z0-9]+)*)\\s*\\{",
+          "begin": "\\b(target)\\s+([a-zA-Z](_?[a-zA-Z0-9]+)*)\\s*\\{",
           "beginCaptures": {
             "1": { "name": "keyword.control" },
             "2": { "name": "variable.language" }
@@ -37,7 +37,7 @@
         },
         {
           "name": "meta.block.extension",
-          "begin": "\\b(extension)\\s+(@?[a-z](_?[a-z0-9]+)*)\\s*\\{",
+          "begin": "\\b(extension)\\s+(@?[a-zA-Z](_?[a-zA-Z0-9]+)*)\\s*\\{",
           "beginCaptures": {
             "1": { "name": "keyword.control" },
             "2": { "name": "variable.language" }
@@ -46,12 +46,13 @@
           "patterns": [
             { "include": "#extension-attributes" },
             { "include": "#defaults-block" },
+            { "include": "#env-block" },
             { "include": "source.terrabuild.lang#comments" }
           ]
         },
         {
           "name": "meta.block.variable",
-          "begin": "\\b(variable)\\s+([a-z](_?[a-z0-9]+)*)\\s*\\{",
+          "begin": "\\b(variable)\\s+([a-zA-Z](_?[a-zA-Z0-9]+)*)\\s*\\{",
           "beginCaptures": {
             "1": { "name": "keyword.control" },
             "2": { "name": "variable.language" }
@@ -141,6 +142,21 @@
         {
           "name": "meta.block.defaults",
           "begin": "\\b(defaults)\\s*\\{",
+          "beginCaptures": {
+            "1": { "name": "keyword.control" }
+          },
+          "end": "\\}",
+          "patterns": [
+            { "include": "source.terrabuild.lang#attribute" }
+          ]
+        }
+      ]
+    },
+    "env-block": {
+      "patterns": [
+        {
+          "name": "meta.block.env",
+          "begin": "\\b(env)\\s*\\{",
           "beginCaptures": {
             "1": { "name": "keyword.control" }
           },

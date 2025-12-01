@@ -18,7 +18,7 @@
     },
     "property": {
       "begin": "\\.(?!\\*)",
-      "end": "\\^?[a-z](_?[a-z0-9]+)*|\\d+",
+      "end": "\\^?[a-zA-Z](_?[a-zA-Z0-9]+)*|\\d+",
       "beginCaptures": {
         "0": { "name": "keyword.operator.accessor" }
       },
@@ -26,7 +26,7 @@
         "0": {
           "patterns": [
             {
-              "match": "\\^?[a-z](_?[a-z0-9]+)*",
+              "match": "\\^?[a-zA-Z](_?[a-zA-Z0-9]+)*",
               "name": "variable.other.constant.property"
             },
             {
@@ -57,7 +57,7 @@
           "begin": "\\{",
           "end": "\\}",
           "patterns": [
-            { "name": "variable.other.constant", "match": "\\b(\\^?[a-z](_?[a-z0-9]+)*)\\b(?=\\s*:)" },
+            { "name": "variable.other.constant", "match": "\\b(\\^?[a-zA-Z](_?[a-zA-Z0-9]+)*)\\b(?=\\s*:)" },
             { "name": "punctuation.separator.key-value", "match": ":" },
             { "name": "punctuation.separator.sequence", "match": "," },
             { "include": "#expression" }        
@@ -67,7 +67,7 @@
     },
     "block": {
         "name": "meta.block",
-        "begin": "(@?[a-z](_?[a-z0-9]+)*)(?:\\s+([a-z](_?[a-z0-9]+)*))?\\s*(\\{)",
+        "begin": "(@?[a-zA-Z](_?[a-zA-Z0-9]+)*)(?:\\s+([a-zA-Z](_?[a-zA-Z0-9]+)*))?\\s*(\\{)",
         "end": "\\}",
         "beginCaptures": {
             "1": { "name": "entity.name.type.class" },
@@ -107,7 +107,7 @@
     },
     "attribute": {
       "name": "meta.attribute.assignment",
-      "begin": "([a-z](_?[a-z0-9]+)*)\\s*=",
+      "begin": "([a-zA-Z](_?[a-zA-Z0-9]+)*)\\s*=",
       "beginCaptures": {
         "1": { "name": "variable.parameter" }
       },
@@ -134,7 +134,7 @@
       "patterns": [
         {
           "name": "constant.other.symbol.enum",
-          "match": "~[a-z](_?[a-z0-9]+)*"
+          "match": "~[a-zA-Z](_?[a-zA-Z0-9]+)*"
         }
       ]
     },
@@ -201,7 +201,7 @@
     },
     "function": {
       "name": "meta.function-call",
-      "begin": "([a-z](_?[a-z0-9]+)*)(\\()",
+      "begin": "([a-zA-Z](_?[a-zA-Z0-9]+)*)(\\()",
       "end": "\\)",
       "beginCaptures": {
         "1": {

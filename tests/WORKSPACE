@@ -37,6 +37,10 @@ extension @dotnet {
         runtime = local.runtimes.dotnet
         configuration = local.dotnet.config
     }
+
+    env {
+        DOTNET_CLI_TELEMETRY_OPTOUT = true
+    }
 }
 
 # variable

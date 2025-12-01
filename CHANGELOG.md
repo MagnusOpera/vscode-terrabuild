@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.41
+- add support for `env` subblock in `extension` block
+
 # 0.0.40
 - remove `dependencies` on `project` block
 
