@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.42
+- add support for `batch` attribute in `target` block
+
 # 0.0.41
 - add support for `env` subblock in `extension` block
 
