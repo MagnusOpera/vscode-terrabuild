@@ -20,6 +20,7 @@ target build {
     artifacts = ~local
     build = true
     batch = ~partition
+    outputs = [ "toto" ]
 
     unknown = "toto"
 }

@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.43
+- add support for `outputs` attribute in `target` block for WORKSPACE
+
 # 0.0.42
 - add support for `batch` attribute in `target` block
 
