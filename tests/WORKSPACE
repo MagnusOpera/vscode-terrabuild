@@ -33,6 +33,7 @@ extension @dotnet {
     variables = [ "GOOGLE_*" ]
     script = "../dotnet.fsx"
     batch = false
+    cpus = 2
     unknown = "toto"
 
     defaults {

@@ -47,6 +47,7 @@ extension @dotnet {
     variables = [ "GOOGLE_*" ]
     script = "../dotnet.fsx"
     batch = true
+    cpus = 2
     unknown = "toto"
 
     defaults {

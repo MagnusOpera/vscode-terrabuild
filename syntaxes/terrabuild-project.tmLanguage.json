@@ -101,7 +101,7 @@
       "patterns": [
         {
           "name": "meta.assignment.workspace",
-          "begin": "\\b(image|platform|variables|script|batch)\\b(?=\\s*=)",
+          "begin": "\\b(image|platform|variables|script|batch|cpus)\\b(?=\\s*=)",
           "beginCaptures": {
               "1": { "name": "keyword.control" }
           },

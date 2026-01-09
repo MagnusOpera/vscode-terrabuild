@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.44
+- add support for `cpus` attribute in `extension` block
+
 # 0.0.43
 - add support for `outputs` attribute in `target` block for WORKSPACE
 
