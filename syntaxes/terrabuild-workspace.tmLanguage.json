@@ -111,7 +111,7 @@
       "patterns": [
         {
           "name": "meta.assignment.workspace",
-          "begin": "\\b(defaults|description)\\b(?=\\s*=)",
+          "begin": "\\b(default|description)\\b(?=\\s*=)",
           "beginCaptures": {
               "1": { "name": "keyword.control" }
           },

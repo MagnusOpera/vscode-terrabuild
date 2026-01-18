@@ -49,7 +49,7 @@ extension @dotnet {
 # variable
 variable toto {
     # bindings
-    defaults = "tagada"
+    default = "tagada"
     description = "this is the toto variable"
 
     unknown = "toto"

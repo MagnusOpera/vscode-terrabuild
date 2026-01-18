@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.45
+- fix `default` (instead of `defaults`) attribute name for variables.
+
 # 0.0.44
 - add support for `cpus` attribute in `extension` block
 
