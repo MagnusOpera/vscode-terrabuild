@@ -4,6 +4,7 @@ workspace {
     # workspace definition
     id = "12334567abcd"
     ignores = [ "obj/**" ]
+    deny = [ ".git", "**/node_modules" ]
     version = "~0.157.0"
     engine = ~docker
     configuration = "local"

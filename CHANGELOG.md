@@ -1,7 +1,10 @@
 # Change Log
 
+# 0.0.46
+- add support for `deny` attribute in `workspace` block for WORKSPACE
+
 # 0.0.45
-- fix `default` (instead of `defaults`) attribute name for variables.
+- fix `default` (instead of `defaults`) attribute name for variables
 
 # 0.0.44
 - add support for `cpus` attribute in `extension` block
