@@ -71,13 +71,12 @@
       "patterns": [
         {
           "name": "meta.assignment.workspace",
-          "begin": "\\b(depends_on|outputs|ignores|includes|labels|environments)\\b(?=\\s*(?:\\+=|-=|=))",
+          "begin": "\\b(depends_on|outputs|ignores|includes|labels|environments)\\b(?=\\s*=)",
           "beginCaptures": {
               "1": { "name": "keyword.control" }
           },
           "end": "(?=$|\\n|\\r|,)",
           "patterns": [
-            { "name": "keyword.operator.assignment", "match": "(\\+=|-=|=)" },
             { "include": "source.terrabuild.lang#expression" }
           ]
         }
@@ -87,13 +86,12 @@
       "patterns": [
         {
           "name": "meta.assignment.workspace",
-          "begin": "\\b(outputs|depends_on|artifacts|build|batch)\\b(?=\\s*(?:\\+=|-=|=))",
+          "begin": "\\b(outputs|depends_on|artifacts|build|batch)\\b(?=\\s*=)",
           "beginCaptures": {
               "1": { "name": "keyword.control" }
           },
           "end": "(?=$|\\n|\\r|,)",
           "patterns": [
-            { "name": "keyword.operator.assignment", "match": "(\\+=|-=|=)" },
             { "include": "source.terrabuild.lang#expression" }
           ]
         }
@@ -103,13 +101,12 @@
       "patterns": [
         {
           "name": "meta.assignment.workspace",
-          "begin": "\\b(image|platform|variables|script|batch|cpus)\\b(?=\\s*(?:\\+=|-=|=))",
+          "begin": "\\b(image|platform|variables|script|batch|cpus)\\b(?=\\s*=)",
           "beginCaptures": {
               "1": { "name": "keyword.control" }
           },
           "end": "(?=$|\\n|\\r|,)",
           "patterns": [
-            { "name": "keyword.operator.assignment", "match": "(\\+=|-=|=)" },
             { "include": "source.terrabuild.lang#expression" }
           ]
         }
