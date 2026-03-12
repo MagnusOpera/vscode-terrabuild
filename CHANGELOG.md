@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.47
+- add support for `+=` and `-=` on target for PROJECT
+
 # 0.0.46
 - add support for `deny` attribute in `workspace` block for WORKSPACE
 

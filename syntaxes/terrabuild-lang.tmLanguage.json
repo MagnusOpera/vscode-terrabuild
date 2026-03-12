@@ -107,13 +107,14 @@
     },
     "attribute": {
       "name": "meta.attribute.assignment",
-      "begin": "([a-zA-Z](_?[a-zA-Z0-9]+)*)\\s*=",
+      "begin": "([a-zA-Z](_?[a-zA-Z0-9]+)*)\\s*(\\+=|-=|=)",
       "beginCaptures": {
-        "1": { "name": "variable.parameter" }
+        "1": { "name": "variable.parameter" },
+        "3": { "name": "keyword.operator.assignment" }
       },
       "end": "(?=,|\\n|\\r|\\})",
       "patterns": [
-        { "name": "keyword.operator.assignment",  "match": "=" },
+        { "name": "keyword.operator.assignment",  "match": "(\\+=|-=|=)" },
         { "include": "#expression" }
       ]
     },
