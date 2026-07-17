@@ -13,6 +13,14 @@ workspace {
     unknown = "toto"
 }
 
+# phase blocks
+phase toolchains {
+}
+
+phase application {
+    depends_on = [ phase.toolchains ]
+}
+
 # target block
 target build {
     # target definition
@@ -21,6 +29,7 @@ target build {
     artifacts = ~local
     build = true
     batch = ~partition
+    phase = phase.application
     outputs = [ "toto" ]
 
     unknown = "toto"

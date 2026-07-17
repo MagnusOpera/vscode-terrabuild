@@ -36,6 +36,19 @@
           ]
         },
         {
+          "name": "meta.block.phase",
+          "begin": "\\b(phase)\\s+([a-zA-Z](_?[a-zA-Z0-9]+)*)\\s*\\{",
+          "beginCaptures": {
+            "1": { "name": "keyword.control" },
+            "2": { "name": "variable.language" }
+          },
+          "end": "\\}",
+          "patterns": [
+            { "include": "#phase-attributes" },
+            { "include": "source.terrabuild.lang#comments" }
+          ]
+        },
+        {
           "name": "meta.block.extension",
           "begin": "\\b(extension)\\s+(@?[a-zA-Z](_?[a-zA-Z0-9]+)*)\\s*\\{",
           "beginCaptures": {
@@ -96,7 +109,22 @@
       "patterns": [
         {
           "name": "meta.assignment.workspace",
-          "begin": "\\b(depends_on|outputs|artifacts|build|batch)\\b(?=\\s*=)",
+          "begin": "\\b(depends_on|outputs|artifacts|build|batch|phase)\\b(?=\\s*=)",
+          "beginCaptures": {
+              "1": { "name": "keyword.control" }
+          },
+          "end": "(?=$|\\n|\\r|,)",
+          "patterns": [
+            { "include": "source.terrabuild.lang#expression" }
+          ]
+        }
+      ]
+    },
+    "phase-attributes": {
+      "patterns": [
+        {
+          "name": "meta.assignment.workspace",
+          "begin": "\\b(depends_on)\\b(?=\\s*=)",
           "beginCaptures": {
               "1": { "name": "keyword.control" }
           },

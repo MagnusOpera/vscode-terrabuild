@@ -13,7 +13,7 @@
     },
     "data": {
       "patterns": [
-        { "name": "keyword.control", "match": "project|local|var|target|terrabuild" }
+        { "name": "keyword.control", "match": "project|local|var|target|phase|terrabuild" }
       ]
     },
     "property": {

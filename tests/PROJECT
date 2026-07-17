@@ -29,6 +29,7 @@ target dist {
     outputs = []
     artifacts = ~remote
     batch = ~none
+    phase = phase.application
     unknown = "toto"
 
     @dotnet tutu { single = true }

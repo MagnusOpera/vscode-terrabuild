@@ -1,5 +1,8 @@
 # Change Log
 
+# 0.0.49
+- add support for workspace-declared phases and phase assignments on WORKSPACE and PROJECT targets
+
 # 0.0.48
 - revert support for `+=` and `-=` on target for PROJECT
 
